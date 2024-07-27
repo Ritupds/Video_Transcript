@@ -24,8 +24,7 @@ def extract_transcript(youtube_video_url):
         transcript_text = " ".join([i['text'] for i in transcript_text])
         return transcript_text
     except Exception as e:
-        st.error(f"Error fetching transcript: {str(e)}")
-        return None
+        raise e
 
 
 
